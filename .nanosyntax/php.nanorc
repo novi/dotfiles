@@ -1,0 +1,53 @@
+syntax "php" "\.php[2345s~]?|\.ctp$"
+
+#html
+color yellow "</?[a-z0-9]+"
+color yellow ">"
+
+#functions
+color white "\<[a-z_][A-Za-z_]*\("
+
+#vars
+color brightred "\$[A-Za-z_]*"
+color cyan "->[A-Za-z_]*"
+color green "->"
+
+#keywords
+color green "\<(array|as|class|compact|empty|extends|null|parent)\>"
+color yellow "\<(empty|endforeach|endif|for|foreach|if|return|var)\>"
+color magenta "\<(function)\>"
+color brightmagenta "\<(echo)\>"
+
+#operators
+color yellow "\s(&&|&=|<|==|=>|\|\|)\s"
+color yellow "(=|::)"
+
+#types
+color red "(true|false)"
+color red "\s[0-9]+\s"
+
+#strings
+color red "'([^'\\]*(\\.[^'\\]*)*)'"
+color red ""([^"\\]*(\\.[^"\\]*)*)""
+
+#parens/brackets/braces
+color magenta "(\(|\))"
+color magenta "(\[|\])"
+color magenta "(\{|\})"
+
+#quotes
+color white "'"
+color white """
+
+#comments
+color brightblue "^//.*"
+color brightblue "\s//.*"
+color brightblue start="/\*" end="\*/"
+
+# Trailing whitespace
+color ,green "[[:space:]]+$"
+
+#php tags
+color magenta "(<\?(php)?|\?>)"
+
+

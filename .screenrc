@@ -1,0 +1,18 @@
+# https://wiki.archlinux.org/index.php/GNU_Screen
+
+startup_message off
+defescape ^Tt
+escape ^Tt
+
+term screen-256color
+
+# Use X scrolling mechanism
+termcapinfo xterm* ti@:te@
+
+# Turn your hardstatus line into a dynamic urxvt|xterm|aterm window title
+backtick 1 5 5 true
+termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+hardstatus string "screen (%n: %t)"
+caption string "%{= kw}%Y-%m-%d;%c %{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+Lw%1`"
+caption always
+
