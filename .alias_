@@ -12,7 +12,7 @@ alias nano='nano -w'
 alias ..='cd ..'
 
 # ls
-if [ `uname` = 'Darwin' ] ; then
+if [ `uname` = 'Darwin' -o `uname` = 'FreeBSD' ] ; then
   alias ls='ls -hGF'
 else
   alias ls='ls -hGF --color=auto'
@@ -29,3 +29,4 @@ alias lm='la | more'
 #
 alias be="bundle exec"
 alias svc="supervisorctl"
+
