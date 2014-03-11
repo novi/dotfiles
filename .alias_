@@ -28,3 +28,4 @@ alias lm='la | more'
 
 #
 alias be="bundle exec"
+alias svc="supervisorctl"
