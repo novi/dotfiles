@@ -1,10 +1,10 @@
-#export LANG=en_US.UTF-8
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
+#export LANG=ja_JP.UTF-8
 
 
 #PROMPT="%m:%n%% "
-#PROMPT="%% "
-PROMPT="☆ "
+PROMPT="%% "
+#PROMPT="☆  "
 RPROMPT="[%~]"
 SPROMPT="correct: %R -> %r ? "
 
@@ -17,13 +17,13 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 
 . ~/.dotfiles/.alias_
 
+fpath=(~/.dotfiles/.zsh $fpath)
+
 autoload -U compinit
 compinit
+
 zstyle ':completion:*' list-colors ''
 
-autoload bashcompinit
-bashcompinit
-source ~/.dotfiles/.git-completion.bash
 
 # auto change directory
 #
@@ -49,5 +49,5 @@ setopt noautoremoveslash
 #
 setopt nolistbeep
 
-
-
+# Swift
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi

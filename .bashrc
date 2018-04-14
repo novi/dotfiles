@@ -26,4 +26,8 @@ function cd() {
     pushd $1 $HOME > /dev/null
 }
 
+# git
+source ~/.dotfiles/git-completion.bash
 
+# Swift
+source ~/.dotfiles/.swift-package-complete.bash
